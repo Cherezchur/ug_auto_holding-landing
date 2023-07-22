@@ -1,0 +1,16 @@
+@import "utils/_reset";
+@import "utils/libs";
+@import "utils/vars";
+@import "utils/mixins";
+@import "utils/fonts";
+@import "utils/grid";
+
+
+html {
+  font-family: $defaultFont;
+  color: $defaultColor;
+  font-size: $defaultSize;
+  font-weight: $defaultFontWeight;
+  line-height: $defaultLineHeight;
+}
+

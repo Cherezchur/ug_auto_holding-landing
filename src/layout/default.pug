@@ -1,0 +1,19 @@
+include ../sections/header/header
+include ../sections/footer/footer
+
+block variables
+
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    title #{title}
+    meta(name="description", content=description)
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+
+  body(class=pageClass)
+    +header()
+    block content
+    +footer()
+
+  block script

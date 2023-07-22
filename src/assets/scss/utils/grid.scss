@@ -1,0 +1,25 @@
+$break_lg: 1199px;
+$break_md: 991px;
+$break_sm: 767px;
+$break_xs: 575px;
+
+@mixin to-lg() {
+  @media (max-width: $break_lg) {
+    @content;
+  }
+}
+@mixin to-md() {
+  @media (max-width: $break_md) {
+    @content;
+  }
+}
+@mixin to-sm() {
+  @media (max-width: $break_sm) {
+    @content;
+  }
+}
+@mixin to-xs() {
+  @media (max-width: $break_xs) {
+    @content;
+  }
+}
