@@ -1,5 +1,6 @@
 include ../sections/header/header
 include ../sections/footer/footer
+include ../sections/menu/menu
 
 block variables
 
@@ -12,8 +13,10 @@ html(lang='en')
     meta(name="viewport" content="width=device-width, initial-scale=1.0")
 
   body(class=pageClass)
-    +header()
-    block content
-    +footer()
+    +menu()
+    .body-content
+      +header()
+      block content
+      +footer()
 
   block script

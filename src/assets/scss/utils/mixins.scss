@@ -1,0 +1,27 @@
+@mixin button-yellow() {
+  color: $black-grey;
+  background-color: $yellow;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.3s;
+
+  &:active {
+    transform: scale(0.9);
+  }
+}
+
+@mixin button-white() {
+  color: $black-grey;
+  background-color: white;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.3s;
+
+  &:active {
+    transform: scale(0.9);
+  }
+}

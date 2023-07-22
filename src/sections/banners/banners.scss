@@ -1,0 +1,163 @@
+.banners {
+  &__top {
+    height: 800px;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+
+    background-image: url('/assets/img/main-banner.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  &__bottom{
+    height: 800px;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-image: url('/assets/img/main-banner-bottom.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  &__content {
+    padding-left: 7vw;
+    width: 76%;
+
+    &.bottom {
+      padding-left: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 50%;
+    }
+  }
+  &__header-h1 {
+    font-family: MazzardH-Bold;
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 65px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: $yellow;
+  }
+  &__header-h2 {
+    font-family: MazzardH-Bold;
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 43px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: $yellow;
+  }
+  &__caption {
+    margin-top: 30px;
+    width: 45%;
+
+    font-family: Cyntho Pro;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 38px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: white;
+
+    &.bottom {
+      margin: 0 auto;
+      margin-top: 45px;
+      width: 70%;
+
+      text-align: center;
+    }
+  }
+  &__buttons {
+    margin-top: 76px;
+    display: flex;
+    gap: 12px;
+  }
+  &__button {
+    font-family: MazzardH-Regular;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 23px;
+    letter-spacing: 0em;
+    text-align: center;
+
+    padding: 15px 55px;
+
+    &.bottom {
+      margin: 0 auto;
+      margin-top: 76px;
+      width: fit-content;
+    }
+    &.yellow {
+      @include button-yellow;
+    }
+    &.white {
+      @include button-white;
+    }
+  }
+
+  @include to-md {
+    &__content {
+      padding-left: 7vw;
+      width: 90%;
+
+      &.bottom {
+        width: 70%;
+      }
+    }
+  }
+
+  @include to-sm {
+    &__top {
+      height: 600px;
+    }
+    &__content {
+      padding-left: 7vw;
+      width: 90%;
+
+      &.bottom {
+        width: 80%;
+      }
+    }
+    &__header-h1 {
+      font-size: 30px;
+      font-weight: 700;
+      line-height: 40px;
+    }
+    &__header-h2 {
+      font-size: 26px;
+      font-weight: 700;
+      line-height: 34px;
+    }
+    &__caption {
+      margin-top: 30px;
+      width: 100%;
+
+      font-size: 28px;
+      line-height: 34px;
+
+      &.bottom {
+        font-size: 24px;
+        line-height: 30px;
+      }
+    }
+    &__button {
+      padding: 10px 35px;
+    }
+  }
+
+  @include to-xs {
+    &__buttons {
+      flex-direction: column;
+    }
+    &__button {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+}

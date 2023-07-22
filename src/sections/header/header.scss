@@ -1,0 +1,111 @@
+.header {
+  background-color: $black-grey;
+  width: 100%;
+
+  font-family: MazzardH-Regular;
+  font-size: 18px;
+  line-height: 23px;
+  letter-spacing: 0em;
+  text-align: left;
+
+  &__contaner {
+    padding: 28px 71px 20px 21px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__logo-text {
+    margin-right: 4vw;
+    display: block;
+    background-image: url('/assets/img/logo-text.svg');
+    background-repeat: no-repeat;
+    width: 224px;
+    height: 36px;
+  }
+  &__contacts {
+    display: flex;
+    flex-direction: row;
+    gap: 4vw;
+  }
+  &__prones {
+    display: flex;
+    flex-direction: column;
+  }
+  &__phone {
+    font-weight: 400;
+    color: white;
+  }
+  &__address {
+    color: white;
+  }
+  &__callback {
+    @include button-yellow;
+    padding: 10px 20px;
+    font-weight: 600;
+  }
+  &__social {
+    display: flex;
+    flex-direction: row;
+    gap: 18px;
+  }
+  &__social-link {
+    width: 30px;
+    height: 30px;
+
+    &.watsapp {
+      background-image: url('/assets/img/icon-whatsapp.svg');
+    }
+    &.tg {
+      background-image: url('/assets/img/icon-tg.svg');
+    }
+  }
+
+  @include to-lg {
+    font-size: 16px;
+    line-height: 21px;
+
+    &__contacts {
+      padding-left: 4vw;
+      display: flex;
+      flex-direction: row;
+      gap: 2vw;
+    }
+    &__logo-text {
+      display: none;
+    }
+  }
+
+  @include to-md {
+    &__contacts {
+      padding-left: 4vw;
+      display: flex;
+      flex-direction: row;
+      gap: 2vw;
+    }
+    &__address {
+      display: none;
+    }
+    &__social {
+      display: none;
+    }
+  }
+
+  @include to-sm {
+    &__contaner {
+      padding: 28px 20px 20px 20px;
+    }
+  }
+
+  @include to-xs {
+    &__logo-text {
+      display: block;
+      background-image: url('/assets/img/logo.svg');
+      width: 56px;
+      height: 42px;
+    }
+    &__contacts {
+      display: none;
+    }
+  }
+}

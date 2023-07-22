@@ -1,0 +1,12 @@
+.index-page {
+  .body-content {
+    padding-left: 80px;
+    width: 100%;
+  }
+
+  @include to-xs {
+    .body-content {
+      padding-left: 0;
+    }
+  }
+}

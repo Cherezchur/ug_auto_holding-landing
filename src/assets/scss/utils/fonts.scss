@@ -1,4 +1,4 @@
-@mixin webFont($family, $file, $weight: normal, $style: normal, $path: "/fonts/") {
+@mixin webFont($family, $file, $weight: normal, $style: normal, $path: "/assets/fonts/") {
   @font-face {
     font-family: $family;
     src: url($path + $file + '.eot');
@@ -13,5 +13,6 @@
 }
 
 
-@include webFont('Gilroy', 'Gilroy-Regular', 400, normal);
-@include webFont('Girce', 'Girce-Regular', 400, normal);
+@include webFont('Cyntho Pro', 'CynthoPro-Regular', 400, normal);
+@include webFont('MazzardH-Bold', 'MazzardH-Bold', 700, normal);
+@include webFont('MazzardH-Regular', 'MazzardH-Regular', 400, normal);
