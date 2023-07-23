@@ -1,0 +1,108 @@
+.cards {
+  width: 100%;
+  overflow: auto;
+  display: flex;
+
+  &__container {
+    margin: 80px 120px 85px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    flex-direction: row;
+    gap: 30px;
+  }
+  &__card {
+    min-width: 378px;
+    width: 378px;
+  }
+  &__img {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 483px;
+    padding: 32px 40px 40px 40px;
+    background-color: $yellow;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+  &__title {
+    font-family: MazzardH-Regular;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 23px;
+    letter-spacing: 0em;
+    text-align: center;
+
+    margin-bottom: 25px;
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  &__item {
+    font-family: Cyntho Pro;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 15px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+  &__buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+  &__button {
+    padding: 10px 0 7px 0;
+    width: 210px;
+    display: flex;
+    justify-content: center;
+    &.grey {
+      @include button-grey();
+    }
+    &.white {
+      @include button-white();
+    }
+  }
+
+  @include to-lg {
+    &__container {
+      width: auto;
+      justify-content: start;
+      margin: 60px 20px 65px;
+    }
+  }
+
+  @include to-md {
+
+  }
+
+  @include to-xs {
+    &__container {
+      margin: 50px 20px 55px;
+    }
+    &__card {
+      min-width: 300px;
+      width: 300px;
+    }
+    &__content {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 433px;
+      padding: 25px 20px 25px 20px;
+      background-color: $yellow;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+    }
+    &__item {
+      font-size: 12px;
+    }
+  }
+}

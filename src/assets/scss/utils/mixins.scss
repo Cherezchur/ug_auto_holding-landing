@@ -25,3 +25,17 @@
     transform: scale(0.9);
   }
 }
+
+@mixin button-grey() {
+  color: white;
+  background-color: $black-grey;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.3s;
+
+  &:active {
+    transform: scale(0.9);
+  }
+}
