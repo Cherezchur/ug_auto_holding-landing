@@ -1,10 +1,9 @@
 .cards {
-  width: 100%;
-  overflow: auto;
   display: flex;
+  justify-content: center;
 
   &__container {
-    margin: 80px 120px 85px;
+    margin: 80px 0 85px;
     display: flex;
     width: 100%;
     justify-content: center;
@@ -73,14 +72,20 @@
 
   @include to-lg {
     &__container {
-      width: auto;
-      justify-content: start;
-      margin: 60px 20px 65px;
+      justify-content: center;
+      margin: 60px 0 65px 0;
+      padding: 0 20px 0 20px;
     }
   }
 
-  @include to-md {
+  @media screen and (max-width: 1320px) {
+    overflow: auto;
+    justify-content: start;
 
+    &__container {
+      width: auto;
+      justify-content: start;
+    }
   }
 
   @include to-xs {

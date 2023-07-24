@@ -1,0 +1,231 @@
+.about-company {
+  &__block {
+    display: flex;
+    max-height: 750px;
+    height: 750px;
+
+    &.bottom {
+      max-height: 641px;
+      height: 641px;
+    }
+  }
+  &__text-wrapper {
+    width: 50%;
+    padding: 50px 30px 30px 7vw;
+  }
+  &__title {
+    margin-bottom: 30px;
+
+    width: 85%;
+    font-family: MazzardH-Regular;
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 43px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+  &__text {
+    margin-bottom: 10px;
+
+    font-family: Cyntho Pro;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+  &__img {
+    object-fit: cover;
+    width: 50%;
+  }
+  &__list-wrapper {
+    width: 50%;
+    margin: auto 0;
+  }
+  &__list {
+    padding: 0 100px 0 180px;
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+  }
+  &__item {
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      left: -115px;
+      top: -25px;
+      width: 77px;
+      height: 77px;
+
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    &.item-1 {
+      &::after {
+        background-image: url("/assets/img/about-item-1.svg");
+      }
+    }
+    &.item-2 {
+      &::after {
+        background-image: url("/assets/img/about-item-2.svg");
+      }
+    }
+    &.item-3 {
+      &::after {
+        background-image: url("/assets/img/about-item-3.svg");
+      }
+    }
+    &.item-4 {
+      &::after {
+        top: -15px;
+        background-image: url("/assets/img/about-item-4.svg");
+      }
+    }
+    &.item-5 {
+      &::after {
+        background-image: url("/assets/img/about-item-5.svg");
+      }
+    }
+  }
+  &__item-text {
+    font-family: MazzardH-Regular;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 23px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+
+  @include to-lg {
+    &__text-wrapper {
+      width: 50%;
+      padding: 30px 30px 30px 4vw;
+    }
+    &__title {
+      margin-bottom: 30px;
+
+      width: 85%;
+      font-family: MazzardH-Regular;
+      font-size: 28px;
+      font-weight: 700;
+      line-height: 35px;
+      letter-spacing: 0em;
+      text-align: left;
+    }
+  }
+  
+  @media screen and (max-width: 1200px) {
+    &__block {
+      display: flex;
+      flex-direction: column;
+      height: auto;
+      max-height: initial;
+
+      &.bottom {
+        max-height: initial;
+        height: auto;
+      }
+    }
+    &__text-wrapper {
+      width: 100%;
+      padding: 50px 30px 30px 7vw;
+    }
+    &__img {
+      margin: auto;
+      width: 450px;
+
+      &.bottom {
+        display: none;
+      }
+    }
+    &__list-wrapper {
+      width: 100%;
+      margin: auto 0;
+    }
+    &__list {
+      padding: 80px 0 60px 0;
+      margin: 0 auto;
+      width: 450px;
+      gap: 70px;
+    }
+    &__item {
+      position: relative;
+      display: flex;
+      margin-left: 100px;
+      &::after {
+        left: -120px;
+        top: -20px;
+        width: 65px;
+        height: 65px;
+      }
+    }
+  }
+
+  @include to-sm {
+    &__img {
+      width: 100%;
+    }
+    &__list {
+      padding: 50px 0 50px 0;
+      width: 390px;
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+    }
+    &__text {
+      font-size: 14px;
+    }
+    &__item {
+      position: relative;
+      &::after {
+        left: -85px;
+        top: -15px;
+        width: 55px;
+        height: 55px;
+
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      &.item-4 {
+        &::after {
+          top: 0;
+        }
+      }
+    }
+    &__item-text {
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+
+  @include to-xs {
+    &__text {
+      font-size: 12px;
+    }
+    &__list {
+      padding: 50px 10px 50px 0;
+      width: 100%;
+      gap: 40px;
+    }
+    &__item {
+      &::after {
+        left: -65px;
+        top: -15px;
+        width: 45px;
+        height: 45px;
+      }
+      &.item-4 {
+        &::after {
+          top: -8px;
+        }
+      }
+    }
+    &__item-text {
+      font-size: 14px;
+      line-height: 18px;
+    }
+  }
+
+}

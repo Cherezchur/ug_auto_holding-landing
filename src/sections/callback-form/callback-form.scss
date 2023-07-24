@@ -1,0 +1,113 @@
+.callback-form {
+  background-color: $black-grey;
+
+  &__form {
+    max-width: 1110px;
+    margin: auto;
+    padding: 55px 0 25px;
+  }
+  &__title {
+    font-family: MazzardH-Regular;
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 23px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: $yellow;
+
+    margin-bottom: 40px;
+  }
+  &__fields {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 30%;
+    gap: 24px;
+  }
+  &__field {
+    input {
+      width: 100%;
+      padding: 17px 30px;
+      background-color: $black-grey;
+      color: white;
+      border: 1px solid white;
+      border-radius: 5px;
+
+      font-family: Cyntho Pro;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 15px;
+      letter-spacing: 0em;
+      text-align: left;
+
+    }
+  }
+  &__button {
+    @include button-yellow();
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+    font-family: MazzardH-Regular;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 23px;
+    letter-spacing: 0em;
+    text-align: center;
+  }
+  &__policy {
+    font-family: Cyntho Pro;
+    text-align: center;
+    color: #d9d9d9;
+    font-size: 12px;
+    margin: auto;
+    margin-top: 30px;
+
+    a {
+      color: #d9d9d9;
+      font-weight: 700;
+    }
+  }
+
+  @include to-md{
+    &__form {
+      width: 80%;
+      padding: 45px 4vw 25px;
+    }
+    &__fields {
+      width: 80%;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 100%;
+      gap: 24px;
+    }
+    &__button {
+      @include button-yellow();
+      display: flex;
+      justify-content: center;
+      width: 100%;
+
+      padding: 15px 0 15px;
+    }
+    &__policy {
+      width: 60%;
+    }
+  }
+
+  @include to-sm{
+    &__title {
+      font-size: 18px;
+      margin-bottom: 40px;
+    }
+    &__form {
+      width: 100%;
+      padding: 35px 4vw 20px;
+    }
+    &__fields {
+      width: 100%;
+      grid-template-columns: 100%;
+      gap: 20px;
+    }
+    &__policy {
+      width: 80%;
+    }
+  }
+}

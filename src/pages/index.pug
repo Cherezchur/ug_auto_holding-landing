@@ -2,16 +2,21 @@ extends ../layout/default
 
 include ../sections/banners/banners
 include ../sections/cards/cards
+include ../sections/callback-form/callback-form
+include ../sections/about-company/about-company
+include ../sections/about-steps/about-steps
 
 block variables
   -
-    const title = 'Главная страница';
-    const description = 'Главная страница';
+    const title = 'ЮГАВТОХОЛДИНГ';
+    const description = 'ЮГАВТОХОЛДИНГ';
     const pageClass = 'index-page';
 
 block content
   main.main
     +banners
     +cards
-
+    +callback-form('Получить полный прайс-лист по экскаваторам-погрузчикам', 'Получить')
+    +about-company
+    +about-steps
 block script
