@@ -1,0 +1,1 @@
+const allNavLinks = document.querySelectorAll('')

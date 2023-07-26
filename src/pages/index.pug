@@ -7,6 +7,8 @@ include ../sections/about-company/about-company
 include ../sections/about-steps/about-steps
 include ../sections/advantages/advantages
 include ../sections/services/services
+include ../sections/news/news
+include ../sections/contacts/contacts
 
 block variables
   -
@@ -25,5 +27,7 @@ block content
     +callback-form('Рассчитать доставку до вашего города', 'Получить')
     +services
     +callback-form('Оставить заявку на сервис', 'Получить')
+    +news
+    +contacts
 
 block script

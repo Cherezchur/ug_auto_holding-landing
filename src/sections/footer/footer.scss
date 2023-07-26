@@ -1,0 +1,13 @@
+.footer {
+  padding: 37px;
+  background-color: $black-grey;
+  &__logo {
+    display: inline-block;
+    background-image: url("/assets/img/logo-footer.svg");
+    background-repeat: no-repeat;
+    background-position: left;
+    width: 284px;
+    height: 45px;
+    padding: 37px 0;
+  }
+}

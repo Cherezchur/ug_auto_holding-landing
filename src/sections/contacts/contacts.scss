@@ -1,0 +1,100 @@
+.contacts {
+  display: flex;
+  &__info {
+    background-color: $extra-light-grey;
+    width: 50%;
+  }
+  &__info-wrapper {
+    max-width: 555px;
+    margin-left: auto;
+    margin-bottom: 60px;
+  }
+  &__title {
+    font-family: MazzardH-Bold;
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 43px;
+    letter-spacing: 0em;
+    text-align: left;
+
+    margin: 80px 0 30px 0;
+  }
+  &__map {
+    width: 50%;
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+  }
+  &__item-title {
+    font-family: MazzardH-Regular;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 23px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: $black-grey;
+  }
+  &__phone,
+  &__email {
+    font-family: Cyntho Pro;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 15px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: $black-grey;
+  }
+  &__list {
+    display: grid;
+    gap: 20px;
+    &.otdely {
+      margin-bottom: 30px;
+      grid-template-columns: repeat(3, 1fr);
+    }
+    &.citys {
+      margin-bottom: 50px;
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media screen and (max-width: 1200px) {
+    &__info-wrapper {
+      padding: 0 20px;
+    }
+  }
+
+  @include to-md {
+    flex-direction: column;
+
+    &__info {
+      width: 100%;
+    }
+    &__info-wrapper {
+      max-width: 100%;
+      margin-left: 0;
+      margin-bottom: 60px;
+      padding: 0 20px;
+    }
+    &__map {
+      width: 100%;
+      height: 630px;
+    }
+  }
+  @include to-sm {
+    &__title {
+      margin: 30px 0 40px;
+      font-size: 28px;
+      line-height: 35px;
+    }
+    &__item-title {
+      font-size: 16px;
+      line-height: 20px;
+    }
+    &__phone,
+    &__email {
+      font-size: 12px;
+    }
+  }
+}

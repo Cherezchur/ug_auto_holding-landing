@@ -1,6 +1,7 @@
 include ../sections/header/header
 include ../sections/footer/footer
 include ../sections/menu/menu
+include ../sections/modal-form/modal-form
 
 block variables
 
@@ -18,5 +19,7 @@ html(lang='en')
       +header()
       block content
       +footer()
+      +modal-form()
+
 
   block script

@@ -1,0 +1,49 @@
+.modal-form {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.6);
+
+  &__close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+
+    cursor: pointer;
+
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+
+    &:after, &:before {
+      content: "";
+      position: absolute;
+      top: 20px;
+      display: block;
+      width: 30px;
+      height: 2px;
+      background-color: $light-grey;
+      border-radius: 4px;
+    }
+    &:after {
+      transform: rotate(45deg);
+    }
+    &:before {
+      transform: rotate(-45deg);
+    }
+  }
+  &__body {
+    max-width: 560px;
+    background-color: $yellow;
+    margin: auto auto;
+  }
+  .callback-form__fields{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
