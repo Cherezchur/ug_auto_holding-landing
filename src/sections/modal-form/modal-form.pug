@@ -1,17 +1,20 @@
 mixin modal-form()
-    div.modal-form(data-init="modalForm")
+    div.modal-form.callback(data-init="modal" data-type="modal-form")
         button.modal-form__close(type="button")
-        .modal-form__body
+        .modal-form__body(data-init-form)
             h2.modal-form__title Узнать цену
-            form.callback-form__form(name="cheaper" method="get" action="https://jsonplaceholder.typicode.com/posts")
+            form.callback-form__form(name="modal-form" method="get" action="https://jsonplaceholder.typicode.com/posts" data-init-form)
                 .callback-form__fields
                     .callback-form__field
-                        input(type="text" name="name-cheaper" id="name-cheaper" data-init="input-field" placeholder="Ваше имя" required)
+                        input(type="text" name="name-cheaper" id="name-cheaper" data-init="input-field" placeholder="Ваше имя")
+                        span.callback-form__callback
                     .callback-form__field
-                        input(type="email" name="email" id="email" minlength="3" data-init="input-field" placeholder="Ваш Email" required)
+                        input(type="email" name="email" id="email" minlength="3" data-init="input-field" placeholder="Ваш Email")
+                        span.callback-form__callback
                     .callback-form__field
-                        input(type="tel" name="phone-cheaper" id="phone-cheaper" minlength="18" maxlength="18" data-init="input-field" placeholder="+7(999) 999-99-99" required)
-                    button.callback-form__button(type="submit") Получить
+                        input(type="tel" name="phone-cheaper" id="phone-cheaper" minlength="18" maxlength="18" data-init="input-field" placeholder="+7 (999) 999-99-99")
+                        span.callback-form__callback
+                    button.callback-form__button(type="submit" data-init="submit") Получить
                 .callback-form__policy
                     span Нажимая на кнопку, вы даёте согласие на обработку своих персональных данных и соглашаетесь с
                     a(href="https://docs.google.com/document/d/1PvcUkw9lqQsu_po2jTTRLBXoRjfz8fx5ZvuRSB82CfA/edit") политикой конфиденциальности

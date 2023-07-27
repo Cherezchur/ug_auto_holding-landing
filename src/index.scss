@@ -1,6 +1,9 @@
 //settings
 @import "assets/scss/main";
 // components
+@import "components/success-modal/success-modal";
+@import "components/card-modal/card-modal";
+@import "components/news-modal/news-modal";
 
 // sections
 @import "sections/header/header";

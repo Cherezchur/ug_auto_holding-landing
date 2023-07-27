@@ -13,6 +13,10 @@
   pointer-events: none;
   cursor: pointer;
 
+  &.callback {
+    z-index: 20;
+  }
+
   &.show {
     pointer-events: auto;
     opacity: 1;

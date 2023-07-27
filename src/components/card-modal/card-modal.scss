@@ -1,0 +1,65 @@
+.modal-form {
+  &.card-modal {
+    background-color: white;
+  }
+}
+
+.card-modal {
+  .modal-form__close {
+    &:after, &:before {
+      background-color: $black-grey;
+    }
+  }
+  .modal-form__body {
+    border-radius: 0;
+    background-image: none;
+    background-color: transparent;
+    width: 1110px;
+    max-width: 1110px;
+    height: 100vh;
+    padding: 65px 0;
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+  }
+  &__img {
+    width: 50%;
+    max-height: 80vh;
+    object-position: top;
+    object-fit: contain;
+    border-radius: 0;
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .modal-form__title {
+    text-align: start;
+  }
+  .banners__button {
+    width: fit-content;
+  }
+
+  @media screen and (max-width: 1200px) {
+    .modal-form__body {
+      width: 100%;
+      max-width: 100%;
+      padding: 0;
+      margin: 65px 20px 0;
+    }
+  }
+
+  @include to-sm {
+    &__img {
+      width: 100%;
+      max-height: 80vh;
+      object-position: top;
+      object-fit: contain;
+      border-radius: 0;
+    }
+    .modal-form__body {
+      flex-direction: column;
+    }
+  }
+}

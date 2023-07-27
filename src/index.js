@@ -2,10 +2,19 @@ import './index.scss';
 
 export const DEV_TYPE = process.env.NODE_ENV;
 
-import { ModalForm } from './sections/modal-form/modal-form';
+import { Modal } from './assets/js/modal';
+import { Form } from './assets/js/form';
 
-const modalForm = document.querySelector('[data-init="modalForm"]');
-new ModalForm(modalForm).init();
+const modals = document.querySelectorAll('[data-init="modal"]');
+const forms = document.querySelectorAll('[data-init-form]');
+
+if(modals.length) {
+  modals.forEach(modal => new Modal(modal).init());
+}
+
+if(forms.length) {
+  forms.forEach(form => new Form(form).init());
+}
 
 // Якорные ссылки
 

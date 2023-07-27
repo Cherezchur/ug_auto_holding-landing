@@ -1,18 +1,18 @@
-export class ModalForm {
+export class Modal {
   constructor(el) {
     this.el = el;
-    this.showButtons = '[data-show-modal]';
+    // this.showButtons = '[data-show-modal]';
     this.modalClose = '.modal-form__close';
   }
 
   loadState() {
     this.modalClose = this.el.querySelector(this.modalClose);
-    this.showButtons = document.querySelectorAll(this.showButtons);
+    this.showButtons = document.querySelectorAll(`[data-type-modal="${this.el.dataset.type}"`);
   }
 
   loadEvents() {
     this.el.addEventListener('click', (e) => {
-      if(e.target.dataset.init === 'modalForm') this.closeModal()
+      if(e.target.dataset.init === 'modal') this.closeModal();
     });
 
     if(this.modalClose) {
@@ -21,7 +21,10 @@ export class ModalForm {
 
     if(this.showButtons) {
       this.showButtons.forEach(button => {
-        button.addEventListener('click', () => this.showModal());
+        button.addEventListener('click', (e) => {
+          e.preventDefault();
+          this.showModal();
+        });
       });
     }
   }

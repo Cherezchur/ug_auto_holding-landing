@@ -1,16 +1,20 @@
 mixin callback-form(title, submitText)
-    section.callback-form
-        form.callback-form__form(name="cheaper" method="get" action="https://jsonplaceholder.typicode.com/posts")
+    section.callback-form(data-init-form)
+        form.callback-form__form.show(name="cheaper" method="get" action="https://jsonplaceholder.typicode.com/posts")
             h2.callback-form__title=title
             .callback-form__fields
                 .callback-form__field
-                    input(type="text" name="name-cheaper" id="name-cheaper" data-init="input-field" placeholder="Ваше имя" required)
+                    input(type="text" name="name" id="name" data-init="input-field" placeholder="Ваше имя")
+                    span.callback-form__callback
                 .callback-form__field
-                    input(type="email" name="email" id="email" minlength="3" data-init="input-field" placeholder="Ваш Email" required)
+                    input(type="email" name="email" id="email" minlength="3" data-init="input-field" placeholder="Ваш Email")
+                    span.callback-form__callback
                 .callback-form__field
-                    input(type="tel" name="phone-cheaper" id="phone-cheaper" minlength="18" maxlength="18" data-init="input-field" placeholder="+7(999) 999-99-99" required)
-                button.callback-form__button(type="submit")=submitText
+                    input(type="tel" name="phone-cheaper" id="phone-cheaper" minlength="11" maxlength="12" data-init="input-field" placeholder="+7(999) 999-99-99")
+                    span.callback-form__callback
+                button.callback-form__button(type="submit" data-init="submit")=submitText
             .callback-form__policy
                 span Нажимая на кнопку, вы даёте согласие на обработку своих персональных данных и соглашаетесь с
                 a(href="https://docs.google.com/document/d/1PvcUkw9lqQsu_po2jTTRLBXoRjfz8fx5ZvuRSB82CfA/edit") политикой конфиденциальности
+        .callback-form__success(data-init="successful") Успешно отправлено!
 

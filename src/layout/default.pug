@@ -2,6 +2,15 @@ include ../sections/header/header
 include ../sections/footer/footer
 include ../sections/menu/menu
 include ../sections/modal-form/modal-form
+include ../components/success-modal/success-modal
+
+include ../components/card-modal/card-modal-1
+include ../components/card-modal/card-modal-2
+include ../components/card-modal/card-modal-3
+
+include ../components/news-modal/news-modal-1
+include ../components/news-modal/news-modal-2
+include ../components/news-modal/news-modal-3
 
 block variables
 
@@ -20,6 +29,15 @@ html(lang='en')
       block content
       +footer()
       +modal-form()
+      +success-modal()
+
+      +card-modal-1()
+      +card-modal-2()
+      +card-modal-3()
+
+      +news-modal-1()
+      +news-modal-2()
+      +news-modal-3()
 
 
   block script
