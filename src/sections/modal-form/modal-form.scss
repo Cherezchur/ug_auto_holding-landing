@@ -7,11 +7,27 @@
   height: 100vh;
   z-index: 10;
   background-color: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+
+  transition: opacity .3s;
+  pointer-events: none;
+  cursor: pointer;
+
+  &.show {
+    pointer-events: auto;
+    opacity: 1;
+
+    .modal-form__body {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 
   &__close {
     position: absolute;
     top: 20px;
     right: 20px;
+    padding: 0;
 
     cursor: pointer;
 
@@ -37,13 +53,81 @@
     }
   }
   &__body {
+    padding: 120px 45px 40px;
     max-width: 560px;
     background-color: $yellow;
     margin: auto auto;
+
+    background-image: url("/assets/img/modal-form-bg.svg");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: contain;
+
+    transition: opacity .3s, transform .3s;
+    transform: translateY(40px);
+    opacity: 0;
+    cursor: auto;
+  }
+  &__title {
+    text-align: center;
+    font-size: 28px;
+    line-height: 34px;
+    font-weight: 600;
+  }
+  .callback-form__form {
+    width: 100%;
+    padding: 10px 0 0;
   }
   .callback-form__fields{
+    width: 100%;
+    padding: 0;
     display: flex;
     flex-direction: column;
     gap: 20px;
+
+    input {
+      padding: 17px 0;
+      border: none;
+      background: transparent;
+      border-radius: 0;
+      border-bottom: 1px solid $black-grey;
+
+      font-size: 16px;
+      line-height: 1.33;
+      color: $black-grey;
+
+      &::placeholder {
+        color: $light-grey;
+      }
+    }
+  }
+  .callback-form__button {
+    margin-top: 20px;
+    width: 100%;
+    padding: 15px 0;
+    background-color: $black-grey;
+    color: white;
+    //border
+  }
+  .callback-form__policy {
+    width: 100%;
+    font-size: 15px;
+    line-height: 1.55;
+    color: $black-grey;
+
+    a {
+      color: #ff8562;
+    }
+  }
+
+  @include to-sm{
+    &__close {
+      &:after, &:before {
+        backdrop-color: white;
+      }
+    }
+    &__body {
+      padding: 100px 20px 20px;
+    }
   }
 }

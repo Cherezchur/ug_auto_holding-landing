@@ -14,3 +14,9 @@ html {
   line-height: $defaultLineHeight;
 }
 
+body {
+  &.modal-show {
+    overflow: hidden;
+  }
+}
+
