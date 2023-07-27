@@ -119,9 +119,9 @@
   }
 
   @include to-sm {
-    &__top, &__bottom {
-      height: 600px;
-    }
+    //&__top, &__bottom {
+    //  height: 600px;
+    //}
     &__content {
       padding-left: 7vw;
       width: 90%;
