@@ -5,7 +5,8 @@
     width: 50%;
   }
   &__info-wrapper {
-    max-width: 555px;
+    padding-left: 40px;
+    width: 100%;
     margin-left: auto;
     margin-bottom: 60px;
   }
@@ -17,7 +18,7 @@
     letter-spacing: 0em;
     text-align: left;
 
-    margin: 80px 0 30px 0;
+    margin: 60px 0 30px 0;
   }
   &__map {
     width: 50%;
